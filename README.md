@@ -1,0 +1,1 @@
+# min_players_to_get_shot
