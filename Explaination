@@ -1,0 +1,47 @@
+def min_players_to_get_shot(N, K, heights):
+    count = 0
+
+    for height in heights:
+        if height > K:
+            count += 1
+
+    return count
+=>   This function, min_players_to_get_shot, takes three parameters: N (number of players between Gi-Hun and Ali), K (height of Gi-Hun and Ali), and heights (a list containing the heights of players between Gi-Hun and Ali). It calculates and returns the minimum number of players who need to get shot so that Ali is visible in Gi-Hun's line of sight.
+
+# Read the number of test cases
+T = int(input().strip())
+=>This reads the number of test cases T from the input.
+
+for _ in range(T):
+    # Read N and K for each test case
+    N, K = map(int, input().split())
+=>This loop iterates through each test case. For each test case, it reads the values of N and K from the input.
+
+    # Read the heights of players between Gi-Hun and Ali
+    heights = list(map(int, input().split()))
+=>This line reads the heights of players between Gi-Hun and Ali as a list.
+
+
+    # Calculate and print the minimum number of players to get shot
+    result = min_players_to_get_shot(N, K, heights)
+    print(result)
+=>It then calls the min_players_to_get_shot function with the provided parameters and prints the result for each test case.
+
+Here's an example of how the code works with the provided sample input:
+
+3
+4 10
+2 13 4 16
+5 8
+9 3 8 8 4
+4 6
+1 2 3 4
+
+
+Output:
+2
+1
+0
+Test Case 1: The second and fourth players need to get shot.
+Test Case 2: Only the first player needs to get shot.
+Test Case 3: No player needs to get shot as all are shorter than Gi-Hun and Ali.
