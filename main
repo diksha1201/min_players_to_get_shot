@@ -1,0 +1,24 @@
+Q.2_
+
+def min_players_to_get_shot(N, K, heights):
+    count = 0
+
+    for height in heights:
+        if height > K:
+            count += 1
+
+    return count
+
+# Read the number of test cases
+T = int(input().strip())
+
+for _ in range(T):
+    # Read N and K for each test case
+    N, K = map(int, input().split())
+
+    # Read the heights of players between Gi-Hun and Ali
+    heights = list(map(int, input().split()))
+
+    # Calculate and print the minimum number of players to get shot
+    result = min_players_to_get_shot(N, K, heights)
+    print(result)
